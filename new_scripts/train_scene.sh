@@ -1,0 +1,2 @@
+### Adding instances and encoded features
+python train_seg.py --name label2city_256p_scene_1 --label_nc 42 --no_ganFeat_loss --use_new_label --no_D_label --no_canny_edge --use_self_loss --self_vgg_mul 20 --niter_iter 200000 --use_style_iter -1 --niter_decay_iter 200000 --display_freq 300 --fineSize 256 --dataroot './datasets/bdd2/' --model 'c_pix2pixHD' --no_instance --gpu_ids=3 --batchSize=1 --use_iter_decay --loadSize 256 --num_D 1 --label_indexs '0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,255';

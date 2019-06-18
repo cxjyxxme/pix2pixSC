@@ -1,0 +1,2 @@
+### Adding instances and encoded features
+python train_pose.py --name label2city_256p_pose_1 --use_self_loss --self_vgg_mul 20 --no_D_label --do_pose_dist_map --label_nc 0 --style_stage_mul "0:0,600000:0.1,650000:0.5,700000:1" --random_drop_prob 0 --no_ganFeat_loss --no_canny_edge --niter_iter 1100000 --use_style_iter -1 --niter_decay_iter 200000 --input_nc 23 --display_freq 300 --fineSize 256 --dataroot './datasets/YouTubePose2/' --model 'c_pix2pixHD' --no_instance --gpu_ids=2 --batchSize=1 --use_iter_decay --loadSize 256 --num_D 1;

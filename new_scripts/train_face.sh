@@ -1,0 +1,2 @@
+### Adding instances and encoded features
+python train_face.py --name label2city_256p_face_1 --use_self_loss --self_vgg_mul 20 --no_D_label --no_ganFeat_loss --label_nc 0 --no_canny_edge --style_stage_mul "0:0,500000:0.1,550000:0.3,600000:0.5,700000:1" --niter_iter 1500000 --use_style_iter 0 --niter_decay_iter 200000 --input_nc 15 --display_freq 300 --fineSize 256 --dataroot './datasets/FaceForensics3/' --model 'c_pix2pixHD' --no_instance --gpu_ids=1 --batchSize=1 --use_iter_decay --loadSize 256 --num_D 1;
