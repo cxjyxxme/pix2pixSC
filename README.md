@@ -41,15 +41,17 @@ We use the <a href="https://bair.berkeley.edu/blog/2018/05/30/bdd/">BDD100k</a> 
 ### Installation
 ```bash
 git clone [this project]
-mkdir FaceForensics
-download FaceForensics dataset to FaceForensics/datas
-cd Example-Guided-Image-Synthesis
+cd pix2pixSC
+# download datas.zip at https://drive.google.com/drive/folders/1O94UcCXONq7p2ZiPcfi-dldjREQ-GsJK or https://share.weiyun.com/5lHBkE0
+unzip datas.zip
+mv datas/checkpoints ./
+mv datas/datasets ./
+
+# scripts below is optional
+mkdir ../FaceForensics
+download FaceForensics dataset to ../FaceForensics/datas
 python process.py
-mkdir datasets
 python generate_data_face_forensics.py --source_path '../FaceForensics/out_data' --target_path './datasets/FaceForensics3/' --same_style_rate 0.3 --neighbor_size 10 --A_repeat_num 50 --copy_data
-download data.zip at ../
-unzip data.zip
-mv ../data/checkpoints Example-Guided-Image-Synthesis/
 ```
 
 ### Training
@@ -61,6 +63,14 @@ new_scripts/train_[Task name].sh
 ```bash
 new_scripts/test_[Task name].sh
 ```
+
+### Inference Face
+Edit inference/infer_list.txt, one test case each line, outputs of each test case will be in ./results.
+```bash
+new_scripts/infer_face.sh
+```
+Inference code of other tasks will come later.
+
 ## Results
 ### Face
 <p align="center"><img width="100%" src="img/face.png" /></p>

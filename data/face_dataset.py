@@ -33,7 +33,7 @@ class FaceDataset(BaseDataset):
 
     def get_X2(self, path, params):
         B = Image.open(path).convert('RGB')
-        transform_B = get_transform(self.opt, params)      
+        transform_B = get_transform(self.opt, params)
         B_tensor = transform_B(B)
         return B_tensor, B
 

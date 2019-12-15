@@ -1,0 +1,2 @@
+inference/test_imgs/1.jpg inference/test_imgs/2.jpg
+inference/test_imgs/2.jpg inference/test_imgs/1.jpg
